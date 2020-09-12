@@ -1,4 +1,4 @@
-## Univariate Inequality Charts w/ matplotlib
+## Univariate Inequality Plots w/ matplotlib
 
 
 ```python
@@ -303,6 +303,7 @@ assert kwargs == dict(inclusive=False)
 def plot_ineq_expr(expr, **kwargs):
     xdata, kwargs = get_points_from_ineq_expr(expr)
     kwargs.setdefault('xlim', True)
+    kwargs.setdefault('title', f'${sympy.latex(expr)}$')
     return plot_univariate_inequality(xdata, **kwargs)
 
 x = symbols('x', real=True)
